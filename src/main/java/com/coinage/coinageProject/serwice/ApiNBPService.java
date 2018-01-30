@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -17,18 +16,15 @@ import java.util.List;
 public class ApiNBPService {
 
     private final static RestTemplate REST_TEMPLATE = new RestTemplate();
-    private final static Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    private final static String API_URL = "http://api.nbp.pl/api/exchangerates/tables/A";
 
 
     public List<Coinage> getRatesFromNBP() {
         log.info("Getting data from API");
 
-        ResponseEntity<OuterObj[]> responseEntity = REST_TEMPLATE.getForEntity("http://api.nbp" +
-                        ".pl/api/exchangerates/tables/A",
-                OuterObj[].class);
+        ResponseEntity<OuterObj[]> responseEntity = REST_TEMPLATE.getForEntity(API_URL, OuterObj[].class);
 
         OuterObj[] outerObjs = responseEntity.getBody();
-        System.out.println(GSON.toJson(outerObjs[0]));
 
         return outerObjs[0].getRates();
     }
