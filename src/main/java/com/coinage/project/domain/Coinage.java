@@ -1,4 +1,4 @@
-package com.coinage.coinageProject.domain;
+package com.coinage.project.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

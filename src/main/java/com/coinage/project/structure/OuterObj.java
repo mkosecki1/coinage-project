@@ -1,6 +1,6 @@
-package com.coinage.coinageProject.structure;
+package com.coinage.project.structure;
 
-import com.coinage.coinageProject.domain.Coinage;
+import com.coinage.project.domain.Coinage;
 import lombok.Getter;
 import lombok.Setter;
 

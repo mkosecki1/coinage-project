@@ -1,6 +1,6 @@
-package com.coinage.coinageProject.controller;
+package com.coinage.project.controller;
 
-import com.coinage.coinageProject.serwice.CoinageService;
+import com.coinage.project.serwice.CoinageService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

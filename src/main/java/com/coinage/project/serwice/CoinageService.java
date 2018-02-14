@@ -1,10 +1,9 @@
-package com.coinage.coinageProject.serwice;
+package com.coinage.project.serwice;
 
-import com.coinage.coinageProject.APIException;
-import com.coinage.coinageProject.domain.Coinage;
+import com.coinage.project.APIException;
+import com.coinage.project.domain.Coinage;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,9 +1,7 @@
-package com.coinage.coinageProject.serwice;
+package com.coinage.project.serwice;
 
-import com.coinage.coinageProject.domain.Coinage;
-import com.coinage.coinageProject.structure.OuterObj;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.coinage.project.domain.Coinage;
+import com.coinage.project.structure.OuterObj;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
