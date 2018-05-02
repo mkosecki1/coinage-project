@@ -51,8 +51,6 @@ public class ApiNBPServiceTestSuite {
         //When
         List<Coinage> result = apiNBPService.getRatesFromNBP();
         Assert.assertNotNull(result);
-
-
     }
 
 }
