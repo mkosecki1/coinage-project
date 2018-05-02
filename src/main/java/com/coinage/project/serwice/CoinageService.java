@@ -25,9 +25,9 @@ public class CoinageService {
                 .findFirst()
                 .orElseThrow(APIException::new);
 
-        Double resould = quantity / currencyMid;
+        Double result = quantity / currencyMid;
 
-        return resould;
+        return result;
 
     }
 }

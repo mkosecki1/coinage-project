@@ -2,6 +2,7 @@ package com.coinage.project.serwice;
 
 import com.coinage.project.domain.Coinage;
 import com.coinage.project.structure.OuterObj;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ApiNBPServiceTest {
+public class ApiNBPServiceTestSuite {
 
     @Autowired
     private ApiNBPService apiNBPService;
@@ -38,6 +39,20 @@ public class ApiNBPServiceTest {
 
         //Then
         //exception is thrown
+    }
+
+    @Test
+    public void test() throws NullPointerException{
+        //Given
+        Coinage coinage = new Coinage("dolar kanadyjski","CAD",2.6626);
+        OuterObj outerObj = new OuterObj();
+        outerObj.getRates().add(coinage);
+
+        //When
+        List<Coinage> result = apiNBPService.getRatesFromNBP();
+        Assert.assertNotNull(result);
+
+
     }
 
 }

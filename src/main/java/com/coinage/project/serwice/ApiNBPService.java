@@ -28,6 +28,4 @@ public class ApiNBPService {
 
         return outerObjs[0].getRates();
     }
-
-
 }

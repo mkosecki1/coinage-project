@@ -10,7 +10,6 @@ import java.util.List;
 @Getter
 @Setter
 public class OuterObj {
-    private String table;
 
     private List<Coinage> rates = new ArrayList<>();
 }
