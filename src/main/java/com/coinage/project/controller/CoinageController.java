@@ -12,16 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @Slf4j
 public class CoinageController {
-
     private CoinageService coinageService;
 
     @GetMapping(value = "/v1/abc")
     public ResponseEntity<Double> calculateValue(@RequestParam String currencyExchange, @RequestParam Double quantity) {
         log.info("retrived data {}");
-
         double res = coinageService.calculateCurrency(currencyExchange, quantity);
-
         return ResponseEntity.ok(res);
     }
-
 }

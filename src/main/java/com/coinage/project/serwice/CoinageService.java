@@ -12,22 +12,17 @@ import java.util.List;
 @AllArgsConstructor
 @Slf4j
 public class CoinageService {
-
     private ApiNBPService apiNBPService;
 
     public double calculateCurrency(String currency, double quantity) {
         log.info("Calculate currency  - currency {}, quantity {}", currency, quantity);
         List<Coinage> rates = apiNBPService.getRatesFromNBP();
-
         Double currencyMid = rates.stream()
                 .filter(rate -> rate.getCode().equals(currency))
                 .map(Coinage::getMid)
                 .findFirst()
                 .orElseThrow(APIException::new);
-
         Double result = quantity / currencyMid;
-
         return result;
-
     }
 }
